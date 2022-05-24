@@ -1,0 +1,260 @@
+/*
+This is a good layout for a mobile-first CSS template.
+Following this flow will minimize the number of styles you need to write and will ensure you are thinking, designing and developing mobile-first.
+Most of your styles get written like standard CSS, but for your mobile presentation. Generally speaking, a good mobile presention will stretch out nicely for larger screens.
+
+Sometimes, when we stretch out to larger screens, we need to make minor tweaks for the larger devices -- you can make these tweaks in the tablet media query, or if the issue exists on desktop only, the desktop media query.
+You will find this is far easier than the opposite task of using CSS to cram your desktop experience into a mobile device.
+*/
+/*********************************************************************
+ LOADS IN A NICE RESET TO ENSURE ALL BROWSERS HAVE THE SAME BASE STYLES
+*********************************************************************/
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css');
+
+/*********************************************************************
+  YOUR MOBILE/BASE STYLES GO HERE
+*********************************************************************/
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    /* Sets default font-size to 16px, ensuring 1em = 16px; */
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+.pg1{
+  height: 100vh;
+  width: 100%;
+  background: url(img/redacred-letter-wr.jpg)no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+
+}
+.pg1 h1{
+  background: rgba(0,0,0,.75);
+  border-radius: 10% 30%;
+  padding: 33px;
+  color: #ffff;
+  font-size: 42px;
+  font-weight: 600;
+  text-align: left;
+  position: absolute;
+  top: 30%;
+  left: 15%;
+  transform: translate(-15%, -25%);
+ 
+}
+.pg1 .byline { 
+  color: #ffff;;
+  padding: 0px 30px;
+  background: rgba(0,0,0,.75);
+  border-radius: 50% 15%;
+  text-align: left;
+  position: absolute;
+  top: 80%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+}
+
+.summary {
+    font-size: 1.2rem;
+    color: #189AB4;
+    font-style: italic;
+    display: block;
+    padding: 22px 0;
+    margin: 22 auto;
+}
+
+.summary.cap {
+  font-size: .9rem;
+  color: #92a3a7;
+  font-style: italic;
+  display: block;
+  padding: 22px 0;
+  margin: 22 auto;
+}
+
+p {
+  color: black;
+  font-size: 1.5 em;
+  
+}
+
+p:first-of-type:first-letter {
+  float: left;
+  font-size: 44px;
+  line-height: .8;
+  font-weight: bold;
+  margin-right: 6px;
+}
+figure,
+img {
+    /* Sets image width to match parent */
+    width: 100%;
+    display: block;
+    margin: 22px auto;
+}
+
+.caption,
+figcaption {
+    font-size: 0.9rem;
+    color: #189AB4;
+    font-style: italic;
+    text-align: center;
+    max-width: 1000px;
+    padding: 5px 0;
+    margin: 0 auto;
+}
+
+  .container {
+      width: 100%;
+      max-width: 800px;
+      padding: 10px;
+      margin: 0 auto;
+  }
+
+  .container.image {
+    max-width: 1200px;
+    padding: 0;
+    -webkit-filter: brightness(100%);
+}
+
+.container.image .caption,
+.container.image figcaption {
+    padding: 5px 10px;
+}
+#dim:hover {
+    -webkit-filter: brightness(60%);
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+
+}
+.dot{
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ff00ea;
+  border-radius: 50%;
+  position: absolute;
+  
+}
+
+.dot .inner,
+.dot .close {
+  display: none;
+ 
+}
+
+.blue {
+  background-color: rgba(24, 154, 180, 0.85);
+}
+
+.annotate {
+  position: relative;
+}
+
+/** Adjust Dots Below */
+#blocks:not(.active) {
+  top: 80%;
+  right: 25%;
+}
+
+#ink:not(.active) {
+  bottom: 15%;
+  left: 20%;
+}
+
+#press:not(.active) {
+  bottom: 35%;
+  left: 40%;
+}
+
+#dry:not(.active) {
+  top: 40%;
+  right: 42%;
+}
+
+#wall:not(.active) {
+  top: 33%;
+  left: 25%;
+}
+
+#editioning:not(.active) {
+  top: 48%;
+  left: 8%;
+}
+
+/** Adjust Dots Above */
+
+.annotate .dot.active {
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 16px;
+  overflow: scroll;
+  z-index: 2;
+}
+
+.dot.active .inner,
+.dot.active .close {
+  display: block;
+  color: white;
+ 
+}
+
+/*********************************************************************
+YOUR TABLET/DESKTOP STYLES GO HERE
+*********************************************************************/
+
+@media(min-width: 681px) {
+  /* Any adjustments for tablets and larger go here.
+  Note these styles will be applied to anything 681px or larger -- so tablet AND desktop */
+
+  
+}
+
+
+/*********************************************************************
+YOUR DESKTOP-ONLY STYLES GO HERE
+*********************************************************************/
+
+@media(min-width: 769px) {
+  /* Any adjustments for desktop and larger go here.
+  Note these styles will be applied to anything 769px or larger -- so desktop */
+}
+
+
+/*********************************************************************
+YOUR MEDIUM-DESKTOP-ONLY STYLES GO HERE
+*********************************************************************/
+
+@media(min-width: 805px) {
+  /* Any adjustments for desktop and larger go here.
+  Note these styles will be applied to anything 769px or larger -- so desktop */
+  .container {
+      padding: 0;
+  }
+}
+
+
+/*********************************************************************
+YOUR LARGE DESKTOP-ONLY STYLES GO HERE
+*********************************************************************/
+
+@media(min-width: 1205px) {
+  /* Any adjustments for desktop and larger go here.
+  Note these styles will be applied to anything 769px or larger -- so desktop */
+  .container.image .caption,
+  .container.image figcaption {
+      padding: 5px 0;
+  }
