@@ -78,6 +78,7 @@ html, body {
   margin: 22 auto;
 }
 
+
 p {
   color: black;
   font-size: 1.5 em;
@@ -258,7 +259,49 @@ a:visited {
   color: #92a3a7;
 }
 
+/* FILTER SPECIFIC BELOW */
+select {
+  display: block;
+  width: 25%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
 
+#tools {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+#tools > div {
+  flex-basis: calc(50% - 10px);
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+}
+
+.item {
+  opacity: 0.20;
+  transition: opacity 0.5s ease-in-out;
+
+}
+
+.item.active {
+  
+  opacity: 1;
+}
+
+.icon {
+  font-size: 4rem;
+  position: relative;
+  padding: 22px;
+}
+
+.des {
+  font-size: .9rem;
+  color: black;
+  display: block;
+
+}
 /*********************************************************************
 YOUR TABLET/DESKTOP STYLES GO HERE
 *********************************************************************/
@@ -266,7 +309,10 @@ YOUR TABLET/DESKTOP STYLES GO HERE
 @media(min-width: 681px) {
   /* Any adjustments for tablets and larger go here.
   Note these styles will be applied to anything 681px or larger -- so tablet AND desktop */
-
+  #tools > div {
+    flex-basis: calc(33% - 10px);
+    text-align: center; 
+}
   
 }
 

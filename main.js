@@ -20,3 +20,20 @@ close_buttons.forEach(function (close_button) {
         clicked_dot.classList.remove("active");
     });
 });
+
+const select = document.querySelector(".filter");
+
+select.addEventListener("change", function (e) {
+    const chosen_tools = e.target.value;
+    const currently_visible = document.querySelectorAll(".item.active");
+    const make_visible = document.querySelectorAll(`.item.${chosen_tools}`);
+    
+    currently_visible.forEach(function (tools) {
+        tools.classList.remove("active");
+    });
+
+    make_visible.forEach(function (tools) {
+        tools.classList.add("active");
+    });
+    
+});
