@@ -118,7 +118,7 @@ figcaption {
   }
 
   .container.image {
-    max-width: 1200px;
+    max-width: 800px;
     padding: 0;
     -webkit-filter: brightness(100%);
 }
@@ -139,7 +139,7 @@ figcaption {
 .dot{
   width: 20px;
   height: 20px;
-  border: 2px solid #ff00ea;
+  border: 2px solid #189AB4;
   border-radius: 50%;
   position: absolute;
   
@@ -152,7 +152,38 @@ figcaption {
 }
 
 .blue {
-  background-color: rgba(24, 154, 180, 0.85);
+  background-color: rgba(0, 187, 249, 0.85);
+}
+
+.green {
+  background-color: rgba(0, 245, 212, 0.85);;
+}
+
+.yellow {
+  background-color: rgba(254, 228, 64, 0.85);;
+}
+
+.pink {
+  background-color: rgba(241, 91, 181, 0.85);;
+}
+.purple {
+  background-color: rgba(155, 93, 229, 0.85);;
+}
+
+.red {
+  background-color: rgba(154, 3, 30, 0.85);
+}
+
+.dkgreen {
+  background-color: rgba(15, 76, 92, 0.85);;
+}
+
+.orange {
+  background-color: rgba(227, 100, 20, 0.85);;
+}
+
+.magenta {
+  background-color: rgba(247, 37, 133, 0.85);;
 }
 
 .annotate {
