@@ -91,6 +91,11 @@ p:first-of-type:first-letter {
   font-weight: bold;
   margin-right: 6px;
 }
+
+ul {
+  list-style-type: disc;
+}
+
 figure,
 img {
     /* Sets image width to match parent */
@@ -118,23 +123,13 @@ figcaption {
   }
 
   .container.image {
-    max-width: 800px;
+    max-width: 900px;
     padding: 0;
-    -webkit-filter: brightness(100%);
 }
 
 .container.image .caption,
 .container.image figcaption {
     padding: 5px 10px;
-}
-#dim:hover {
-    -webkit-filter: brightness(60%);
-    -webkit-transition: all 1s ease;
-    -moz-transition: all 1s ease;
-    -o-transition: all 1s ease;
-    -ms-transition: all 1s ease;
-    transition: all 1s ease;
-
 }
 .dot{
   width: 20px;
@@ -148,26 +143,32 @@ figcaption {
 .dot .inner,
 .dot .close {
   display: none;
- 
+}
+
+.dot:hover{
+  width: 22px;
+  height: 22px;
+  border: 3px solid rgba(247, 37, 133);
+  transition:all 0.3s ease;
 }
 
 .blue {
-  background-color: rgba(0, 187, 249, 0.85);
+  background-color: rgba(4, 137, 181, 0.85);
 }
 
 .green {
-  background-color: rgba(0, 245, 212, 0.85);;
+  background-color: rgba(0, 245, 212, 0.85);
 }
 
 .yellow {
-  background-color: rgba(254, 228, 64, 0.85);;
+  background-color: rgba(254, 228, 64, 0.85);
 }
 
 .pink {
-  background-color: rgba(241, 91, 181, 0.85);;
+  background-color: rgba(241, 91, 181, 0.85);
 }
 .purple {
-  background-color: rgba(155, 93, 229, 0.85);;
+  background-color: rgba(155, 93, 229, 0.85);
 }
 
 .red {
@@ -175,15 +176,15 @@ figcaption {
 }
 
 .dkgreen {
-  background-color: rgba(15, 76, 92, 0.85);;
+  background-color: rgba(15, 76, 92, 0.85);
 }
 
 .orange {
-  background-color: rgba(227, 100, 20, 0.85);;
+  background-color: rgba(227, 100, 20, 0.85);
 }
 
 .magenta {
-  background-color: rgba(247, 37, 133, 0.85);;
+  background-color: rgba(247, 37, 133, 0.85);
 }
 
 .annotate {
@@ -191,34 +192,39 @@ figcaption {
 }
 
 /** Adjust Dots Below */
-#blocks:not(.active) {
-  top: 80%;
+#maldita:not(.active) {
+  top: 14%;
+  right: 15%;
+}
+
+#detector:not(.active) {
+  top: 18%;
+  left: 31%;
+}
+
+#newtral:not(.active) {
+  top: 17%;
+  right: 15%;
+}
+
+#lupa:not(.active) {
+  top: 55%;
   right: 25%;
 }
 
-#ink:not(.active) {
-  bottom: 15%;
-  left: 20%;
+#ecu:not(.active) {
+  top: 47%;
+  left: 51%;
 }
 
-#press:not(.active) {
-  bottom: 35%;
-  left: 40%;
+#colombia:not(.active) {
+  top: 44%;
+  left: 56%;
 }
 
-#dry:not(.active) {
-  top: 40%;
-  right: 42%;
-}
-
-#wall:not(.active) {
-  top: 33%;
-  left: 25%;
-}
-
-#editioning:not(.active) {
-  top: 48%;
-  left: 8%;
+#arg:not(.active) {
+  bottom: 28%;
+  right: 38%;
 }
 
 /** Adjust Dots Above */
@@ -239,9 +245,19 @@ figcaption {
 .dot.active .inner,
 .dot.active .close {
   display: block;
-  color: white;
+  
  
 }
+
+a:link {
+  font-size: 1.1rem;
+  color: rgba(0, 187, 249);
+}
+
+a:visited {
+  color: #92a3a7;
+}
+
 
 /*********************************************************************
 YOUR TABLET/DESKTOP STYLES GO HERE
